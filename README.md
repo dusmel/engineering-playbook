@@ -1,5 +1,5 @@
-# Engineering Playbook
+### What is Andela Engineering?
+***
+The Engineering department is responsible for building out all the internal products of Andela that meet the needs of our business units and are truly world class in functionality.
 
-The who, what, why, where, when, and how of Andela software development.
-
-The documentation can be found in this [wiki](https://github.com/andela/engineering-docs/wiki)
+This repository describes the architecture, conventions and all the best practices of Andela software development.
