@@ -5,7 +5,7 @@ In development environment using the development toolkit [https://github.com/and
 
 - Create a new branch
 - Add environment variable key-value (set environment) in respective service’s .env file in the [development toolkit env_file directory](https://github.com/andela/development-toolkit/tree/master/env_files) 
-- Submit a PR(adding a member of the devops team as reviewer) with your change to be merged by the devops team
+- Submit a PR (adding a member of the devops team as reviewer) with your change to be merged by the devops team
 
 
 In staging or production environment:
