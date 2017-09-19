@@ -11,7 +11,6 @@
     1. [Environment Setup](#environment-setup)
     1. [First Contribution](#first-contribution)
 1. [Week 2](#week-2)
-    1. [Onboarding Sessions](#onboarding-sessions)
     1. [Engineering Playbook](#engineering-playbook)
 1. [Onboarding Checklist](#onboarding-checklist)
 
@@ -72,23 +71,9 @@ In order to continuously improve our onboarding process, we measure how long it 
 
 ### Week 2
 ***
-#### Onboarding Sessions
-***
-**(For Fellows only, not Staff members)**
-
-During your second week, you will be invited to four sessions hosted by various members of the team to discuss some important topics:
-
-- Internal Product _[Ebun Omoni]_
-- Sprint/Agile/Andela Way _[Brice Nkengsa]_
-- Microservices Architecture _[Ikem Okonkwo]_
-- Technology Organization Structure _[Scott Carleton]_
-- Testing _[Sharon Rutto]_
-
-If you did not receive a calendar invite to any of these sessions, please reach out directly to each individual. The onboarding sessions are held during the second week of every month. If you join the team after the sessions have occurred, be sure to be included the sessions the following month.
-
 #### Engineering Playbook
 ***
-Read through our [engineering playbook](https://github.com/andela/engineering-playbook/wiki) to get a feeling of how we work. Some key things to note:
+Read through our [engineering playbook](https://github.com/andela/engineering-playbook) to get a feeling of how we work. Some key things to note:
 - [Ownership](https://github.com/andela/decisions/issues/36): our teams own the implementation of solutions end to end, from frontend to microservices to testing.
 - [Agile Process](https://github.com/andela/engineering-playbook/wiki/Agile-Process): Describes in detail how we work as a team
 - [Conventions](https://github.com/andela/engineering-playbook/wiki/Conventions): The conventions we follow working as a team
@@ -107,5 +92,4 @@ Read through our [engineering playbook](https://github.com/andela/engineering-pl
     - [ ] Make your first contribution
     - [ ] Update the [Time To First Commit](https://docs.google.com/spreadsheets/d/1GE01c8pSg5Hq4bsVfor6I-MvvzdaLAPsAV8w7K4CY94/edit#gid=0) sheet  
 - **Week 2**
-    - [ ] Attend onboarding sessions
     - [ ] Read through engineering playbook
