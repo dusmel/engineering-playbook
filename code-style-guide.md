@@ -1,3 +1,5 @@
+### Code Style Guide
+
 Everyone writes code a little differently. As a team, we have decided to agree on how we write codes.
 The following style guides would help us ensure uniformity in the way we write codes.
 
