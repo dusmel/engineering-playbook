@@ -8,3 +8,5 @@ The following style guides would help us ensure uniformity in the way we write c
 **Ruby**: Airbnb Coding Style Guide (https://github.com/airbnb/ruby)
 
 **React esLint**: esLint file (https://goo.gl/6ADSZb)
+
+**React Style Guide**: Airbnb React Style Guide (https://github.com/airbnb/javascript/tree/master/react)
