@@ -248,7 +248,7 @@ Step by step instructions on how to get the code setup locally. This may include
 
 ### Dependencies
 
-List of libraries, tools, etc needed (e.g. npm, node.js, python, etc)
+List of libraries, tools, etc needed (e.g. yarn, node.js, python, etc)
 
 ### Getting Started
 

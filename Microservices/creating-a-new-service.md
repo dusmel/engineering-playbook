@@ -103,7 +103,7 @@ Since we will be building from docker, specify all the required images for your 
 1. Update the shared submodule. - All Andela application and microservices use the micro-shared repository as a submodule in their own repository. When the project repository is pulled, the shared submodule is initialised and updated using:
   git submodule sync && git submodule update --init
 2. Install dependencies. - Install all the dependencies in your dependency file for your stack using the appropriate command. Ie : 
-  npm install - node
+  yarn add - node
   Pip install -r requirements.txt - python
   Bundle install - For ruby
 3. Run tests. - supply the appropriate commands to run tests in your stack

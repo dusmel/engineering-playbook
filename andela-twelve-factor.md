@@ -94,7 +94,7 @@ Authorization service package.json file looks like the following:
 }
 ```
 
-Dependencies are isolated within _node-modules_ folder where all the [npm](https://npmjs.org) libraries are compiled and installed.
+Dependencies are isolated within _node-modules_ folder where all the [yarn](https://yarnpkg.com/en/) libraries are compiled and installed.
 
 ## 3 - Configuration
 
@@ -102,7 +102,7 @@ Configuration (credentials, database connection string, ...) should be stored in
 
 ### What does that mean for our application ?
 
-In _database.js_, we define the _postgres_ connection and use DATABASE_URL environment variable to pass the postgres connection string. We use [dotenv](https://www.npmjs.com/package/dotenv) npm package to easily manage environment variables for local development.
+In _database.js_, we define the _postgres_ connection and use DATABASE_URL environment variable to pass the postgres connection string. We use [dotenv](https://yarnpkg.com/en/package/dotenv) yarn package to easily manage environment variables for local development.
 
 ```
 const production = {
@@ -170,7 +170,7 @@ WORKDIR /usr/src/app
 ADD package.json /usr/src/app/
 
 # Install dependencies
-RUN npm install --production
+RUN yarn install --production
 
 # Copy source code
 ADD . /usr/src/app/
@@ -181,7 +181,7 @@ ENV PORT 50050
 EXPOSE 50050
 
 # Launch application
-ENTRYPOINT ["npm", "start"]
+ENTRYPOINT ["yarn", "start"]
 ```
 
 Let's build our application `$ docker build -t us.gcr.io/microservices-kube/authorization:0.0.0 .`
@@ -387,4 +387,4 @@ Usually used for maintenance task, though a REPL, admin process must be executed
 
 ### What does that mean for our application ?
 
-Authorization service runs `sequelize db:migrate` each time it starts up as defined by `npm start` task. We can also ssh directly into the running container using `kubectl exec -it POD_NAME sh` or run the command directly using `kubectl exec POD_NAME -- COMMAND_NAME`.
+Authorization service runs `sequelize db:migrate` each time it starts up as defined by `yarn start` task. We can also ssh directly into the running container using `kubectl exec -it POD_NAME sh` or run the command directly using `kubectl exec POD_NAME -- COMMAND_NAME`.
