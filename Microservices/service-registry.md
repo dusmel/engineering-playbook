@@ -8,11 +8,11 @@
 | [Authorization](https://github.com/andela/micro-authorization-service)   | Manages access rights to resources               | `Node.js`   |
 | [Partner](https://github.com/andela/micro-partner-service)          | Manages partner data                            | `Node.js`   |
 | [Email](https://github.com/andela/micro-email-notification)           | Manages email notifications                      | `python`       |
-| [Engagement](https://github.com/andela/micro-engagement-service)      | Manages partner opportunities and developer applications                     | `javascript`   |
+| [Engagement](https://github.com/andela/micro-engagement-service)      | Manages partner opportunities and developer applications                     | `Node.js`   |
 | [Developer Information](https://github.com/andela/micro-fellow-information-service) | Developer metadata                         | `ruby`         |
 | [Freckle Email Reports](https://github.com/andela/micro-freckle-report-service) | Automates sending Freckle emails reports to Developer | `python`   |
 | [Placement](https://github.com/andela/micro-placement-service)       | Manages historical placement of Developers with Partners        | `Node.js`   |
 | [Skill](https://github.com/andela/micro-skills-service)           | Manages Fellowship required skills               | `Node.js`   |
 | [Salesforce](https://github.com/andela/micro-salesforce-service)      | Manages integration with Salesforce              | `Node.js`   |
 | [Slack](https://github.com/andela/micro-slack-notification-service)           | Manages slack notifications                      | `Node.js`   |
-| [User](https://github.com/andela/user-service)             | User management                                  | `golang`       |
+| [User](https://github.com/andela/user-service)             | User management                                  | `Node.js`       |
