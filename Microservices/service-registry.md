@@ -10,7 +10,7 @@
 | [Email](https://github.com/andela/micro-email-notification)           | Manages email notifications                      | `python`       |
 | [Engagement](https://github.com/andela/micro-engagement-service)      | Manages partner opportunities and developer applications                     | `Node.js`   |
 | [Developer Information](https://github.com/andela/micro-fellow-information-service) | Manages Developer metadata                         | `ruby`         |
-| [Freckle Email Reports](https://github.com/andela/micro-freckle-report-service) | Automates sending Freckle emails reports to Developer | `python`   |
+| [Freckle Email Reports](https://github.com/andela/micro-freckle-report-service) | Automates sending Freckle email reports to Developers | `python`   |
 | [Placement](https://github.com/andela/micro-placement-service)       | Manages historical placement of Developers with Partners        | `Node.js`   |
 | [Skill](https://github.com/andela/micro-skills-service)           | Manages Fellowship required skills               | `Node.js`   |
 | [Salesforce](https://github.com/andela/micro-salesforce-service)      | Manages integration with Salesforce              | `Node.js`   |
