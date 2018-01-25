@@ -16,7 +16,7 @@ Technology is the bread and butter of Andela. We train technologists, we work to
 | [Pulse](https://pulse.andela.com/) | Pulse captures the "heart beat" of client engagements and provides tools for the support team to coordinate | [`#pulse`](https://andela.slack.com/messages/pulse/) | [Repo](https://github.com/andela/pulse) | 
 | [Allocations](http://allocations.andela.com/login) |  Allocations is a platform used by the Success department to match the right Fellows with the right engagement. | [`#allocations`](https://andela.slack.com/messages/allocations/) | [Repo](https://github.com/andela/allocations) |
 | [LV](http://lv.andela.com) |  LV helps users receive feedback and use it to make progress on their individual learning objectives. | [`#lv`](https://andela.slack.com/messages/lv/) | [Repo](https://github.com/andela/lv-prototype) |
-| [AIS](http://ais.andela.com) |  AIS helps users manage fellow information, and provides a consolidated view of client health and information. | [`#ais`](https://andela.slack.com/messages/ais/) | [Repo](https://github.com/andela/fis) |
+| [AIS](http://ais.andela.com) |  AIS helps users manage fellow information, and provides a consolidated view of client health and information. | [`#ais`](https://andela.slack.com/messages/ais/) | [Repo](git@github.com:andela/ais.git) |
 
 
 # Slack Etiquette / Best Practices for Communication
