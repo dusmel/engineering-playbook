@@ -1,8 +1,10 @@
-### What is Andela Engineering?
+### What is Engineering?
 ***
-The Engineering department is responsible for building out all the internal products of Andela that meet the needs of our business units and are truly world class in functionality.
+The **Information Division**’s goal is to serve Andela’s business units by providing a scalable and smooth pipeline of partner-ready developers that exceed expectations. 
 
-This repository describes the architecture, conventions and all the best practices of Andela software development.
+The **Technology Department** is the engine of scale at Andela with a strategic focus on capturing data, putting things into systems and increasing productivity.
+
+The **Engineering Team** at Andela drives the implementation and delivery of improvements to that engine. 
 
 ## Table of Contents
 
