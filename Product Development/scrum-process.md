@@ -1,2 +1,0 @@
-- [Product Scrum Ceremonies](https://docs.google.com/document/d/1Nc3hAUJbfNVYIwwPdAh7cCgbNQxbpyzGWMaX9CqzyC0/edit#heading=h.aw40qdtqf391)
-- [Platform Scrum Ceremonies](https://docs.google.com/document/d/1_-fK8ZkDJIsZY_Ftus_g8dRKtvslHWm6j33by5EhIQo/edit#heading=h.aw40qdtqf391)
