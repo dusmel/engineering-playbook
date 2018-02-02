@@ -1,0 +1,1 @@
+One of our primary process goals is to make frequent, small releases of our working software. We do through frequent communication and weekly iterations on a product. We have two scrum processes tailored for Product development teams, and Platform development teams:
