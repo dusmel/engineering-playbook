@@ -1,1 +1,0 @@
-The API documentation can be found [here](https://docs.andela.com/). Login credentials are stored in 1Password.
