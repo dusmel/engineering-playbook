@@ -15,7 +15,7 @@ Technology is the bread and butter of Andela. We train technologists, we work to
 | Platform            | Microservices for all Andela applications        | [`#platform`](https://andela.slack.com/messages/platform/)       | [Service Registry](https://github.com/andela/engineering-playbook/wiki/Service-Registry) |
 | [Pulse](https://pulse.andela.com/) | Pulse captures the "heart beat" of Partner engagements | [`#pulse`](https://andela.slack.com/messages/pulse/) | [Repo](https://github.com/andela/pulse) | 
 | [Allocations](http://allocations.andela.com/login) |  Allocations is a platform used by the Success department to match the right Developers with the right engagement. | [`#allocations`](https://andela.slack.com/messages/allocations/) | [Repo](https://github.com/andela/allocations) |
-| [Canvas LMS](http://lms.andela.com) |  Learning management system for Fellows to track learning progress. | [`#project-manage-lms`](https://andela.slack.com/messages/project-manage-lms/) | [Repo](https://github.com/andela/lms-integration) |
+| [Canvas LMS](http://lms.andela.com) |  Learning management system for Fellows to track learning progress. | [`#project-integrate-lms`](https://andela.slack.com/messages/project-integrate-lms/) | [Repo](https://github.com/andela/lms-integration) |
 | [AIS](http://ais.andela.com) |  AIS helps users manage Developer and Partner information. | [`#ais`](https://andela.slack.com/messages/ais/) | [Repo](git@github.com:andela/ais.git) |
 
 
