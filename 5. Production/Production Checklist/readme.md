@@ -2,6 +2,7 @@ We have found that a short checklist is valuable when setting up a new productio
 
 - For a new `frontend application`:
   - Are we using SSL?
+  - Is the test suite running on CI?
 - For a new `backend service`:
   - Are we following our default service [structure](https://docs.google.com/document/d/1HJnk8cqvblyW6NOGN6xkSsWVvtMmYBrumfXN145ZTL4/edit#heading=h.gdbmzxpjdr5r)?
   - Are long-running processes being run in [background jobs](https://docs.google.com/document/d/1HJnk8cqvblyW6NOGN6xkSsWVvtMmYBrumfXN145ZTL4/edit#heading=h.kr4s147l12xl)?
@@ -13,3 +14,4 @@ We have found that a short checklist is valuable when setting up a new productio
   - Are we auditing all edit actions in the service? Example [here](https://docs.google.com/document/d/1HJnk8cqvblyW6NOGN6xkSsWVvtMmYBrumfXN145ZTL4/edit#heading=h.qwit764xu5h)
   - Are we backing up our production database?
   - If releasing a new version, have we run all needed regression tests at the application level?
+  - Is the test suite running on CI?
