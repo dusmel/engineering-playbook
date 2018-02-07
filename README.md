@@ -4,4 +4,4 @@ The **Information Division**’s goal is to serve Andela’s business units by p
 
 The **Technology Department** is the engine of scale at Andela with a strategic focus on capturing data, putting things into systems and increasing productivity.
 
-The **Engineering Team** at Andela drives the implementation and delivery of improvements to that engine. 
+The **Engineering Team** at Andela drives the implementation and delivery of improvements to that engine, and focuses on delivering solutions faster and in a scalable way.
