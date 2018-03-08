@@ -44,7 +44,7 @@ Standard Method | HTTP Method | Description
 --------------- | ----------- | -----------
 List | GET < collection url > | Used to retrieve a representation of  collection.
 Get | GET < resource url > | Used to retrieve a representation of a resource.
-Create | POST < collection url > | Used to create new new resources and sub-resources.
+Create | POST < collection url > | Used to create new resources and sub-resources.
 Update | PUT or PATCH < resource url > | Used to update existing resources.
 Delete | DELETE < resource url > | Used to delete existing resources.
 
