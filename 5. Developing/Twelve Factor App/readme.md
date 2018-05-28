@@ -94,7 +94,7 @@ Authorization service package.json file looks like the following:
 }
 ```
 
-Dependencies are isolated within _node-modules_ folder where all the [yarn](https://yarnpkg.com/en/) libraries are compiled and installed.
+Dependencies are isolated within _node-modules_ folder where all the [node](https://www.npmjs.com/) packages or libraries are compiled and installed.
 
 ## 3 - Configuration
 
@@ -142,7 +142,7 @@ This ensure the application is loosely coupled with the services so it can easil
 
 ### What does that mean for our application ?
 
-For authorization service, we are using 2 external backing services namely postgres database and kafka. The loosely coupling is already done by the DATABASE_URL and KAFKA_URL used to pass the connection string.
+For authorization service, we are using 2 external backing services namely postgres database and kafka. This loose coupling is  done by the DATABASE_URL and KAFKA_URL used to pass the connection string.
 
 If something wrong happens with our instance of postgres or our kafka cluster, we can easily switch to a new instance, providing a new MONGO_URL environment variable and restart the application.
 
