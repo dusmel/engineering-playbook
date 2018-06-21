@@ -3,7 +3,7 @@ The basics are:
 - We have unit tests that each developer runs on their own machine.
 - When they commit their code to git, the tests are run again, "integrated" with code from other developers.
 
-This helps ensure there's nothing specific to the developer's machine making the tests pass. 
+This helps ensure there's nothing specific to the developer's machine making the tests pass.
 The code in version control needs to run cleanly in production later so before the code is allowed to be deployed to production,
 it is run on a CI server or service.
 
@@ -12,7 +12,7 @@ When we write the fix and commit to version control again, we'll get a "passing 
 
 Green is good.
 
-We use [CircleCI](https://circleci.com/gh/andela) for continous integration.
+For continuous integration, we use [CircleCI](https://circleci.com/gh/andela) and  [Jenkins](https://jenkins-staging.andela.com/) (for some of our Apprenticeship product services).
 
 CI test runs are triggered when we push to Github and can be seen as part of the status checks of pull requests.
 We also use CodeClimate to help us follow our style guide and keep review comments focused on improving the code quality.
