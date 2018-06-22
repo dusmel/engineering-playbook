@@ -1,10 +1,12 @@
 ### What is Engineering at Andela?
 ***
-The **Information Division**’s goal is to serve Andela’s business units by providing a scalable and smooth pipeline of partner-ready developers that exceed expectations. 
-
 The **Technology Department** is the engine of scale at Andela with a strategic focus on capturing data, putting things into systems and increasing productivity.
 
 The **Engineering Team** at Andela drives the implementation and delivery of improvements to that engine, and focuses on delivering solutions faster and in a scalable way.
+
+The **Apprenticeship Program**, owned by the Talent Development Department, is a full time, 3 month program where D0B Fellows (who have successfully completed Simulations) learn through building real products for real end users on internal or external teams. Find more about the Apprenticeship Program [here](https://github.com/andela/learning/tree/Apprenticeship-Advancement/Apprenticeships).
+
+The **Apprenticeship Engineering Team** at Andela aims to provide meaningful and real work experience opportunities for Andela apprentices (D0Bs) while delivering technical solutions that improve our in-house processes and workflows.
 
 ### Contributing
 ***
