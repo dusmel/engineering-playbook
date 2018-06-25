@@ -1,3 +1,21 @@
+# Pair Programming
+
+Pair programming is very central to how we transfer knowledge between engineers at Andela. Several arguments have been made for and against it around the web, but this is how we have been using it here so far.
+
+
+### How To
+
+#### In Apprenticeship: Cognitive Apprenticeship Model
+
+We apply the principles of cognitive apprenticeship through pair programming. [See more details here](https://github.com/andela/learning/blob/Apprenticeship-Advancement/Apprenticeships/Pair%20Programming.md).
+
+#### At Engineering
+
+We do not formally pair program to the extreme but we use it for the following scenarios:
+
+- Senior engineers unblocking juniors or engineers unblocking each other.
+- During the onboarding phase for new engineers.
+
 ### Pair Programming Styles
 
 **Driver-Navigator**
