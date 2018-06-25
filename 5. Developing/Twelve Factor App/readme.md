@@ -1,14 +1,10 @@
 #12 Factor Application
 
-Today, a lot of applications are services deployed in the cloud, on infrastructure of cloud providers such as Amazon AWS, Google Compute Engine, DigitalOcean, Rackspace, OVH, ...
-
-Heroku is PaaS (Platform as a Service) that relies on Amazon AWS and which makes the deployment of applications as easy as git push heroku master (ran from the root of your application).
-
-With the huge number of applications deployed on Heroku, engineers of the company acquired a great knowledge of what should be done to get cloud native application.
+Today, a lot of applications are services deployed in the cloud, on infrastructure of cloud providers such as Amazon AWS, Google Compute Engine, DigitalOcean, Rackspace, etc.
 
 12 factor methodology is the result of their observations. As the name states, it presents 12 principles that will help application to be cloud ready, horizontally scalable, and portable.
 
-In this writeup, we will follow each one of the 12 factor and see how we build microservices that are 12 factor compliant. I will be using `application` to mean `authorization microservice` throughout this writeup. However, we are applying the principles across all our microservices and frontend apps.
+In this write-up, we will follow each one of the 12 factor and see how we build microservices that are 12 factor compliant. I will be using `application` to mean `authorization microservice` throughout this writeup. However, we are applying the principles across all our microservices and frontend apps.
 
 ## 1 - Codebase
 
@@ -21,7 +17,7 @@ One codebase used for several deployments of the application
 * staging
 * production
 
-### What does that mean for our application ?
+### What does that mean for our application?
 
 We use Git versioning system to handle our source code and hence, the codebase is the same across all deploys. For example, a developer has some commits not yet deployed to staging; staging has some commits not yet deployed to production. But they all share the same codebase, thus making them identifiable as different deploys of the same app.
 
@@ -29,9 +25,9 @@ We use Git versioning system to handle our source code and hence, the codebase i
 
 Application's dependencies must be declared and isolated
 
-### What does that mean for our application ?
+### What does that mean for our application?
 
-Declaration are done in package.json file.
+Declaration are done in `package.json` file.
 
 Authorization service package.json file looks like the following:
 
@@ -64,7 +60,6 @@ Authorization service package.json file looks like the following:
     "lodash": "^4.11.1",
     "micro-health-check": "0.0.0",
     "moment": "^2.13.0",
-    "no-kafka": "^2.5.4",
     "pg": "^6.0.3",
     "sequelize": "^3.23.4",
     "sequelize-cli": "^2.4.0",
@@ -94,15 +89,15 @@ Authorization service package.json file looks like the following:
 }
 ```
 
-Dependencies are isolated within _node-modules_ folder where all the [node](https://www.npmjs.com/) packages or libraries are compiled and installed.
+Dependencies are isolated within `node-modules` folder where all the [node](https://www.npmjs.com/) packages or libraries are compiled and installed.
 
 ## 3 - Configuration
 
-Configuration (credentials, database connection string, ...) should be stored in the environment.
+Configuration (credentials, database connection string, etc) should be stored in the environment.
 
 ### What does that mean for our application ?
 
-In _database.js_, we define the _postgres_ connection and use DATABASE_URL environment variable to pass the postgres connection string. We use [dotenv](https://yarnpkg.com/en/package/dotenv) yarn package to easily manage environment variables for local development.
+In `database.js`, we define the `postgres`connection and use DATABASE_URL environment variable to pass the `postgres` connection string. We use [dotenv](https://yarnpkg.com/en/package/dotenv) yarn package to easily manage environment variables for local development.
 
 ```
 const production = {
@@ -119,7 +114,7 @@ const config = {
 module.exports = config;
 ```
 
-In _models/index.js_, we make sure the _postgres_ connection defined above is the one used.
+In `models/index.js`, we make sure the `postgres` connection defined above is the one used.
 
 ```
 const config = require('../database')[env];
@@ -134,17 +129,17 @@ Handle external services as external resources of the application.
 
 Examples:
 * database
-* kafka
+* Google PubSub
 * redis
 * ...
 
 This ensure the application is loosely coupled with the services so it can easily switch provider or instance if needed
 
-### What does that mean for our application ?
+### What does that mean for our application?
 
-For authorization service, we are using 2 external backing services namely postgres database and kafka. This loose coupling is  done by the DATABASE_URL and KAFKA_URL used to pass the connection string.
+For instance, for the `authorization service`, we are an external backing services namely postgres database. This loose coupling is  done by the `DATABASE_URL` used to pass the connection string.
 
-If something wrong happens with our instance of postgres or our kafka cluster, we can easily switch to a new instance, providing a new MONGO_URL environment variable and restart the application.
+If something wrong happens with our instance of postgres, we can easily switch to a new instance, providing a new `DATABASE_URL` environment variable and restart the application.
 
 ## 5 - Build / Release / Run
 
@@ -243,18 +238,6 @@ spec:
             value: authorization
           - name: DATABASE_URL
             value: "postgres://$(POSTGRES_USER):$(POSTGRES_PASSWORD)@$(POSTGRES_HOST):5432/$(POSTGRES_DB)"
-          # kafka setup
-          - name: KAFKA_URL
-            valueFrom:
-              secretKeyRef:
-                name: setup-secrets
-                key: kafka-url
-          - name: KAFKA_CLIENT_ID
-            valueFrom:
-              fieldRef:
-                fieldPath: metadata.name
-          - name: SERVICE_URL
-            value: 0.0.0.0:50050
 ```
 Notice that some env variables where injected from a secret config in the running kubernetes cluster.
 
@@ -340,11 +323,11 @@ Each process of an application must be disposable.
   * finish to handle the current request
   * usage of a queueing system for long lasting (worker type) process
 
-### What does that mean for our application ?
+### What does that mean for our application?
 
-Our application exposes HTTP endPoints that are easy and quick to handle. If we were to have some long lasting worker processes, we use Apache Kafka to handle it (services that are purely worker processes include email notification and slack notification service).
+Our application exposes HTTP endPoints that are easy and quick to handle. If we were to have some long lasting worker processes, we use Google PubSub to handle it (services that are purely worker processes include email notification and slack notification service).
 
-Kafka stores indexes of events processed by each worker. When a worker is restarted, it can provide an index indicating at which point in time it needs to restart the event handling. Doing so no events are lost.
+Google PubSub stores events processed by each worker. When a worker is restarted, it can provide an index indicating at which point in time it needs to restart the event handling. Doing so no events are lost.
 
 ## 10 - Dev / Prod parity
 
