@@ -1,6 +1,7 @@
 ### Code Style Guide
 
 Everyone writes code a little differently. As a team, we have decided to agree on how we write codes.
+
 The following style guides would help us ensure uniformity in the way we write codes.
 
 ##### Android:
@@ -45,3 +46,8 @@ The following style guides would help us ensure uniformity in the way we write c
 
 ##### Typescript:
 - [TSLint Config for Airbnb Javascript Style Guide](https://www.npmjs.com/package/tslint-config-airbnb)
+
+&mdash;
+
+>**Tip on Linters:**
+>Each of the above style guides will most likely have a linter (and it's IDE plugin/extension), make sure you install it to make things easy for you; for instance [ESLint for VSCode](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint). And also add it as part of your build process. See a [compiled list here](https://github.com/AndelaOSP/awesome-linters).
