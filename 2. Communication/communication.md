@@ -2,27 +2,20 @@ Technology is the bread and butter of Andela. We train technologists, we work to
 
 [Original Communication Proposal](https://docs.google.com/document/d/1EoX--kbBlFE5os688KJ4WhzmYwY7ALxnjRjsOHZKGK4/edit#)
 
-# Channels
-
-[`#technology`](https://andela.slack.com/messages/technology/)
-[`#ask-technology`](https://andela.slack.com/messages/ask-technology)
-
 # Products
 
 
-| **Name**        | **Description**                       | **Slack** | **Github** | **Type**                                                    |
-|-----------------|---------------------------------------|----------------|-------------------------|-------------------------|
-| [Activo](http://lenken.andela.com) | System to manage all of Andela’s physical assets, manage allocations, track repairs and provide insights through dashboards and reports. | [`#activo`](https://andela.slack.com/messages/activo/) | [FE Repo](https://github.com/andela/activo-web) & [BE Repo](https://github.com/andela/activo-api) | Apprenticeship Product |
-| [AIS](http://ais.andela.com) |  AIS is the single source of truth for all information related to Andelans. | [`#ais`](https://andela.slack.com/messages/ais/) | [Repo](git@github.com:andela/ais.git) | Core Product |
-| [Allocations](http://allocations.andela.com/login) |  Allocations is a platform used by the Success department to match the right Developers with the right engagement. | [`#allocations`](https://andela.slack.com/messages/allocations/) | [Repo](https://github.com/andela/allocations) | Core Product |
-| [Canvas LMS](http://lms.andela.com) |  Learning management system for Fellows to track learning progress. | [`#project-integrate-lms`](https://andela.slack.com/messages/project-integrate-lms/) | [Repo](https://github.com/andela/lms-integration) | Core Product |
-| [Converge](https://converge-front.andela.com) | Converge manages availability and use of our meeting rooms ensuring Andelans can access available meeting rooms with ease while providing the operations team with valuable insights to drive decision making. | [`#converge`](https://andela.slack.com/messages/converge/) | [FE Repo](https://github.com/andela/mrm_front) & [BE Repo](https://github.com/andela/mrm_api) & [Android Repo](https://github.com/andela/mrm-mobile) | Apprenticeship Product |
-| [Lenken](http://lenken.andela.com) |  Facilitates knowledge and skills transfer within the fellowship in the quickest and most efficient way possible by taking advantage of both internal and external mentors. | [`#lenken`](https://andela.slack.com/messages/lenken/) | [FE Repo](https://github.com/andela/lenken) & [BE Repo](https://github.com/andela/lenken-server) | Apprenticeship Product |
-| Platform            | Microservices for all Andela applications        | [`#platform`](https://andela.slack.com/messages/platform/)       | [Service Registry](https://github.com/andela/engineering-playbook/wiki/Service-Registry) | Core Product |
-| [Pulse](https://pulse.andela.com/) | Pulse captures the "heart beat" of Partner engagements | [`#pulse`](https://andela.slack.com/messages/pulse/) | [Repo](https://github.com/andela/pulse) | Core Product |
-| [VOF](http://vof.andela.com) |  VOF exists to enable aspiring technology leaders to demonstrate that they are Andela-ready. | [`#talent-solutions`](https://andela.slack.com/messages/talent-solutions/) | [Repo](https://github.com/andela/vof-tracker) | Apprenticeship Product |
-
-
+| **Name**| **Description** | **Github** | **Type**|
+|-----------------|---------------------------------------|-------------------------|-------------------------|
+| [Activo](http://lenken.andela.com) | System to manage all of Andela’s physical assets, manage allocations, track repairs and provide insights through dashboards and reports.| [FE Repo](https://github.com/andela/activo-web) & [BE Repo](https://github.com/andela/activo-api) | Apprenticeship Product |
+| [AIS](http://ais.andela.com) |  AIS is the single source of truth for all information related to Andelans. | [Repo](git@github.com:andela/ais.git) | Core Product |
+| [Allocations](http://allocations.andela.com/login) |  Allocations is a platform used by the Success department to match the right Developers with the right engagement. | [Repo](https://github.com/andela/allocations) | Core Product |
+| [Canvas LMS](http://lms.andela.com) |  Learning management system for Fellows to track learning progress. | [Repo](https://github.com/andela/lms-integration) | Core Product |
+| [Converge](https://converge-front.andela.com) | Converge manages availability and use of our meeting rooms ensuring Andelans can access available meeting rooms with ease while providing the operations team with valuable insights to drive decision making.| [FE Repo](https://github.com/andela/mrm_front) & [BE Repo](https://github.com/andela/mrm_api) & [Android Repo](https://github.com/andela/mrm-mobile) | Apprenticeship Product |
+| [Lenken](http://lenken.andela.com) |  Facilitates knowledge and skills transfer within the fellowship in the quickest and most efficient way possible by taking advantage of both internal and external mentors. | [FE Repo](https://github.com/andela/lenken) & [BE Repo](https://github.com/andela/lenken-server) | Apprenticeship Product |
+| Platform            | Microservices for all Andela applications        | [Service Registry](https://github.com/andela/engineering-playbook/wiki/Service-Registry) | Core Product |
+| [Pulse](https://pulse.andela.com/) | Pulse captures the "heart beat" of Partner engagements | [Repo](https://github.com/andela/pulse) | Core Product |
+| [VOF](http://vof.andela.com) |  VOF exists to enable aspiring technology leaders to demonstrate that they are Andela-ready. | [Repo](https://github.com/andela/vof-tracker) | Apprenticeship Product |
 
 
 # Slack Etiquette / Best Practices for Communication
