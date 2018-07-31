@@ -13,7 +13,7 @@ We’ve found that the scale is easy to explain and easy for developers to get g
 > I mostly understand what needs to be done, but there is enough uncertainty here that requires breaking this story futher.
 
 ### General Estimation Guidelines
-- Estimates should reflect level of **complexity** and **effort**, NOT time.
+- Estimates should reflect level of **effort**, NOT time.
 - In any given iteration, developer *only* work on 1 Point stories
 - For Tech Leads breaking down tasks, consider how complex they are to the developers, not for yourself.
 
