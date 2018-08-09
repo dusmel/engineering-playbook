@@ -84,6 +84,7 @@ This is a very short description of the change.
 * includes motivation for the change and contrasts with previous behavior
 
 http://365git.tumblr.com/post/3308646748/writing-git-commit-messages
+
 http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
 
 #### Message Footer
@@ -97,8 +98,10 @@ Finished, fixed or delivered stories should be listed on a separate line in the 
 ***
 ```
 feat(kafka): implement exactly once delivery
+
 - ensure every event published to kafka is delivered exactly once
 - implement error handling for failed delivery
+
 [Delivers #130635935]
 ```
 
