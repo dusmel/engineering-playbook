@@ -9,9 +9,10 @@ Unit tests are written for individual units/components of a system. The primary 
 ***
 #### How to write unit tests
 1. **Select a unit test framework:** Most languages already have a unit testing framework. The framework is a development tool, same as your editor and compiler. 
-2. **Identify the testable units/components:** Ideally _ALL_ classes in a system should be testable. The test cases identified should focus on test that impact the behaviour of the system. 
-3. **Implement the test:** A unit test basically should test one method, provide arguments to the method, test that the result is as expected.Ensure that each test case is independent of each other. This means if a method depends on a database, the test case should not interact with the database to test the method. Instead, an abstract interface should be created around the database connection and implemented with the mock object.
-4. **Run the tests:** Ensure that the tests can be run on any environment locally, and on a CI. The tests are usually released into the code repository along with the code they test. Code without tests should not be released.
+2. **Identify the testable units/components:** Ideally _ALL_ classes in a system should be testable. The test cases identified should focus on test that impact the behaviour of the system.
+3. **Create test files in same directory as the source file:** Test files should reside in the same directory as the source file with `.spec.js` suffix. This is to ensure easy accessibility of the source file from the test file. 
+4. **Implement the test:** A unit test basically should test one method, provide arguments to the method, test that the result is as expected.Ensure that each test case is independent of each other. This means if a method depends on a database, the test case should not interact with the database to test the method. Instead, an abstract interface should be created around the database connection and implemented with the mock object.
+5. **Run the tests:** Ensure that the tests can be run on any environment locally, and on a CI. The tests are usually released into the code repository along with the code they test. Code without tests should not be released.
 
 #### Example:
 
