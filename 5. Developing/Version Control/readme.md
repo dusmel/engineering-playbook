@@ -6,7 +6,7 @@ We use [Git](https://git-scm.com/) as our defacto software versioning system (SV
 
 ## Git Workflow
 
-We use [Git Workflow as documented here](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow), with [our own conventions](../Conventions) on branch naming, commit messages and PR format.
+We use [Gitflow Workflow as documented here](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow), with [our own conventions](../Conventions) on branch naming, commit messages and PR format.
 
 ## Advanced Git Features
 
