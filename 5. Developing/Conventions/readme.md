@@ -156,7 +156,7 @@ A Feature story should contain the following information
 
 **Title:** one line describing the story
 
-**Description:** a detailed description of the story. the description should include acceptance criteria
+**Description:** a detailed description of the story. The description should include acceptance criteria
 
 Example
 ```
@@ -240,7 +240,7 @@ Each Repo's readme should follow this basic structure:
 
 ## Documentation
 
-List of RPC endpoints exposed by the service
+List of endpoints exposed by the service
 
 ## Setup
 
