@@ -8,7 +8,7 @@ We recommend the following apps (over and above other essential dev-work apps) f
 
 - Terminal - [zsh](./zsh.md)
 - [iTerm](https://www.iterm2.com/) - has nice features like splitting the terminal, search, etc.
-- IDE: we recommend [VS Code](https://www.iterm2.com/) or [Atom](https://atom.io/).
+- IDE: we recommend [VS Code](https://code.visualstudio.com/) or [Atom](https://atom.io/).
 
 ### IDE Extensions
 
