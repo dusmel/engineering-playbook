@@ -9,15 +9,20 @@ The **Apprenticeship Program**, owned by the Talent Development Department, is a
 The **Apprenticeship Engineering Team** at Andela aims to provide meaningful and real work experience opportunities for Andela apprentices (D0Bs) while delivering technical solutions that improve our in-house processes and workflows.
 
 ### Contributing
-***
 
 #### Issues
-***
-Issues are always very welcome - after all, they are a big part of making our engineering processes better. Please be sure to follow the issue template.
+Issues are always very welcome - after all, they are a big part of making our engineering processes better. Please be sure to follow the [issue template](https://github.com/andela/engineering-playbook/issues/new).
 
 #### Pull requests
-***
 We're glad to get pull request if anything is missing or something is buggy. However, there are a couple of things you can do to make life easier for the maintainers:
 
 - Explain the issue that your PR is solving - or link to an existing issue
 - Follow the repository structure, and new sections in the corresponding folders
+
+>**Git Conventions**
+>Make sure you adhere to [our convention](https://github.com/andela/engineering-playbook/tree/master/5.%20Developing/Conventions#commit-message) for your commits and PR.
+>The following is how we categorize the commits/work:
+>
+> - _Feature_ - a new guideline we've added (Predix, `feat:`)
+> - _Fix_ - some corrections, something that was overlooked but not a new change in standards, that will be a feature too eg. typo, etc (Prefix, `fix:`)
+> - _Chore_ - I think they will be rare here but could be something like formatting, re-arranging content, etc. (Prefix, `chore:`)
