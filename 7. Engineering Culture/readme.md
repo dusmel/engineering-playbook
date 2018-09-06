@@ -1,33 +1,30 @@
 A collection of *practices*, *behaviours*, and *interactions* that make up the culture of our work environment.
 
-## Trust
-- We support and make decisions to make Andela a success
-- We figure out the best way to work with each other
-- We find our own solutions to complex problems
+Andela's values are **Excellence**, **Passion**, **Integrity**, and **Collaboration** (EPIC).
 
-## Ownership
-- We identify and attack problems ourselves, rather than seeing them as someone else’s responsibility
-- We treat technical debt as picking up the trash. We pick up the trash everywhere we go
-- We capture any work we do in tickets, i.e. no ticket no work
-- We can deploy code to production ourselves, and stay responsible for incidents and errors
-- We promote a culture of no blame and no fear
+What does it mean to be an EPIC Engineer at Andela?
 
-## Simplicity
-- We don’t over-engineer and we don’t cut corners
+## Excellence
+- We plan, execute and deliver on time
+- We aspire and strive to reach for mastery of our craft
 - We don’t sacrifice quality for velocity
-- We believe simplicity allows for transparency, reuse and easy knowledge transfer
-- We believe removing complexity takes time and needs to be done iteratively
+- We strive for simplicity
 
-## Iteration
-- We demo and release often
-- We use ways of gaining data-driven insight to verify our assumptions
-- We hypothesize, measure, analyze, learn, adjust
+## Passion
+- We learn with curiosity
+- We remain resilient & persistent
+- We empathize with our users and optimize for value delivery
+- We actively look for opportunities to better serve our users
+
+## Integrity
+- We don’t over-engineer and we don’t cut corners
+- We trust each other to take ownership without being prompted to
+- We share our concerns, blockers, failures and successes freely and openly
+- We avoid blame game, yet don’t shy away from giving or receiving hard feedback
 
 ## Collaboration
-- We favor direct communication and avoid unnecessary layers in communication
-- We offer direct responses to requests versus no response  
-- We consistently ask questions in various channels to seek clarity and vet all assumptions
-- We work together collaboratively, knowing that when we rise or fall, we do it as a team
-- We reach out to anyone (and everyone) openly whenever we need help or unblocking
-- We share gained knowledge and experiences across teams
-- We believe in super teams over super-heros
+- We put the team before ourselves
+- We are remote and distributed first
+- We over-communicate to stay informed
+- We are consistent and intentional about knowledge sharing
+- We collaboratively create solutions and resolve issues
