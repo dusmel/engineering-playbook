@@ -26,3 +26,25 @@ We're glad to get pull request if anything is missing or something is buggy. How
 > - _Feature_ - a new guideline we've added (Predix, `feat:`)
 > - _Fix_ - some corrections, something that was overlooked but not a new change in standards, that will be a feature too eg. typo, etc (Prefix, `fix:`)
 > - _Chore_ - I think they will be rare here but could be something like formatting, re-arranging content, etc. (Prefix, `chore:`)
+
+### Releases
+
+This is a living document, therefore there will be continuous improvements made on it from time to time, both major and minor. Here are some of the guidelines on how to make releases for this document.
+
+#### How to Release
+
+- Create release notes as per the [guide here](https://help.github.com/articles/creating-releases/), you can [see previous releases here](https://github.com/andela/engineering-playbook/releases).
+- See [release template here](.github/RELEASE_TEMPLATE.md).
+- **Versioning:** our versioning will following the [Semantic Versioning](http://semver.org) convention:
+  ```
+  Given a version number MAJOR.MINOR.PATCH, increment the:
+
+  MAJOR version when you make incompatible API changes,
+  MINOR version when you add functionality in a backwards-compatible manner, and
+  PATCH version when you make backwards-compatible bug fixes.
+  ```
+- Once the release note is created, these changes are supposed to be communicated to the teams via the major communication channels: Email (list) and Slack.
+
+#### When to Release
+
+- The recommended frequency for releases is **quarterly**, but this is not cast in stone.
