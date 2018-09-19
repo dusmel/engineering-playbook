@@ -1,4 +1,4 @@
-#12 Factor Application
+# 12 Factor Application
 
 Today, a lot of applications are services deployed in the cloud, on infrastructure of cloud providers such as Amazon AWS, Google Compute Engine, DigitalOcean, Rackspace, etc.
 
@@ -356,11 +356,11 @@ A lot of services offer a centralized log management ([Elastic Stack / ELK](http
 
 ### What does that mean for our application ?
 
-Since we are using google container engine, logs from all components in the kubernetes cluster are aggregated by google cloud logging.
+Since we are using google container engine, logs from all components in the kubernetes cluster are aggregated by GCP's [Stackdriver Logging](https://console.cloud.google.com/logs/viewer).
 
-Example google cloud logging dashboard for authorization service.
+See an example screenshot below:
 
-![google cloud logging](https://i.imgsafe.org/84d312642b.png)
+![Stackdriver Logging](https://user-images.githubusercontent.com/13568167/45154806-7d22f100-b1e1-11e8-8a0a-e8405e7d8602.png)
 
 ## 12 - Admin processes
 
