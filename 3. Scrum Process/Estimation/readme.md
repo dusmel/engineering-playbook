@@ -14,7 +14,7 @@ We’ve found that the scale is easy to explain and easy for developers to get g
 
 ### General Estimation Guidelines
 - Estimates should reflect level of **effort**, NOT time.
-- In any given iteration, developer *only* work on 1 Point stories
+- In any given iteration, developers should *only* work on 1 or 2 point stories
 - For Tech Leads breaking down tasks, consider how complex they are to the developers, not for yourself.
 
 ### Additional Resources
