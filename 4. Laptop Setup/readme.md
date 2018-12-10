@@ -1,14 +1,23 @@
 # Laptop/Machine Setup
+This guide covers the basics of setting up a development environment on a new Mac. Whether you are an experienced programmer or not, this guide is intended for everyone to use as a reference for setting up your environment or installing languages/libraries.
 
-Automate your development environment by setting up our [development toolkit](https://github.com/andela/development-toolkit)
+Some of the environments we will set up are Node (JavaScript), Python, C++ and Ruby. Even if you don't program in all of them, they are useful to have as many command-line tools rely on them
 
-### Essential Applications
+The full guide can be found [here](https://sourabhbajaj.com/mac-setup/). But below are the essential apps required for minimal machine setup. 
 
-We recommend the following apps (over and above other essential dev-work apps) for your minimal machine setup:
-
-- Terminal - [zsh](./zsh.md)
-- [iTerm](https://www.iterm2.com/) - has nice features like splitting the terminal, search, etc.
-- IDE: we recommend [VS Code](https://code.visualstudio.com/) or [Atom](https://atom.io/).
+### Essential Applications & Settings
+1. [Sytem preferences](https://sourabhbajaj.com/mac-setup/SystemPreferences/) (optional)
+2. [Xcode](https://sourabhbajaj.com/mac-setup/Xcode/)
+3. [Homebrew](https://sourabhbajaj.com/mac-setup/Homebrew/)
+4. [iTerm2](https://sourabhbajaj.com/mac-setup/iTerm/)
+5. [Git](https://sourabhbajaj.com/mac-setup/Git/)
+6. IDE: we recommend [VS Code](https://code.visualstudio.com/) or [Atom](https://atom.io/).
+7. [Python](https://sourabhbajaj.com/mac-setup/Python/)
+8. [CplusPlus](https://sourabhbajaj.com/mac-setup/Cpp/)
+9. [Ruby](https://sourabhbajaj.com/mac-setup/Ruby/)
+10. [Node.js](https://sourabhbajaj.com/mac-setup/Node.js/)
+11. [Docker](https://sourabhbajaj.com/mac-setup/Docker/)
+12. [Other Apps](https://sourabhbajaj.com/mac-setup/Apps/)(optional)
 
 ### IDE Extensions
 
@@ -34,3 +43,6 @@ We recommend the following extensions or their equivalent for your IDE of choice
   - [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
   - [Regex Preview and Editor](https://marketplace.visualstudio.com/items?itemName=le0zh.vscode-regexp-preivew)
   - [Auto Import](https://marketplace.visualstudio.com/items?itemName=steoates.autoimport)
+
+### Development toolkit
+Standup Andela's microservices on demand by setting up our [development toolkit](https://github.com/andela/development-toolkit)
