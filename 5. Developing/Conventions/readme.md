@@ -11,10 +11,10 @@
     2. [PR Description Template](#pr-description-template)
     3. [PR Example](#pr-example)
     4. [PR Etiquette](#pr-etiquette)
-4. [Pivotal Tracker Story](#pivotal-tracker-story)
-    1. [Feature Story](#feature)
-    2. [Bug Story](#bug)
-    3. [Chore Story](#chore)
+4. [Jira Issue](#jira-issue)
+    1. [Story Issue](#story)
+    2. [Bug Issue](#bug)
+    3. [Task Issue](#task)
 5. [Repo Readme](#repo-readme)
 
 ### Branch Naming
@@ -22,23 +22,23 @@
 Branches created should be named using the following format:
 
 ```
-{story type}-{story summary}-{pivotal tracker id}
+{issue type}-{issue summary}-{Jira issue id}
 ```
 
-`story type` - Indicates the context of the branch and should be one of:
+`issue type` - Indicates the context of the branch and should be one of:
 
-- ft == Feature
+- sy == Story [Story in Jira]
 - bg == Bug
-- ch == Chore
+- tk == Task
 
 `story summary` - Short 2-3 words summary about what the branch contains
 
-`pivotal tracker id` - The Id of the pivotal tracker story associated with the commit
+`Jira Issue id` - The Id of the Jira issue associated with the commit
 
 **Example**
 
 ```
-ft-resources-rest-endpoints-111504508
+sy-resources-rest-endpoints-DT-1048
 ```
 
 ### Commit Message
@@ -61,7 +61,7 @@ The message header is a single line that contains succinct description of the ch
 
 #####`<type>`
 This describes the kind of change that this commit is providing.
-* feat (feature)
+* story (story)
 * fix (bug fix)
 * docs (documentation)
 * style (formatting, missing semi colons, …)
@@ -89,20 +89,20 @@ http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
 
 #### Message Footer
 ***
-Finished, fixed or delivered stories should be listed on a separate line in the footer prefixed with "Finishes", "Fixes" , or "Delivers" keyword like this:
+Finished, fixed or delivered issue types should be listed on a separate line in the footer prefixed with "Finishes", "Fixes" , or "Delivers" keyword like this:
 ```
-[(Finishes|Fixes|Delivers) #TRACKER_STORY_ID]
+[(Finishes|Fixes|Delivers) JIRA_ISSUE_ID]
 ```
 
 #### Message Example
 ***
 ```
-feat(kafka): implement exactly once delivery
+story(kafka): implement exactly once delivery
 
 - ensure every event published to kafka is delivered exactly once
 - implement error handling for failed delivery
 
-[Delivers #130635935]
+[Delivers DT-1048]
 ```
 
 ### Pull Request
@@ -113,7 +113,7 @@ feat(kafka): implement exactly once delivery
 The PR title should be named using the following format:
 
 ```
-#[STORY_ID] [Story description]
+[JIRA_ISSUE_ID] [Story description]
 ```
 
 #### PR Description Template
@@ -125,7 +125,7 @@ The description of the PR should contain the following headings and correspondin
 #### Description of Task to be completed?
 #### How should this be manually tested?
 #### Any background context you want to provide?
-#### What are the relevant pivotal tracker stories?
+#### What are the relevant Jira Issues?
 #### Screenshots (if appropriate)
 #### Questions:
 ```
@@ -151,11 +151,11 @@ PRs that take too much time to get reviewed can hinder on a team's progress. As 
 
 
 
-### Pivotal Tracker Story
+### Jira Issues
 ***
-#### Feature
+#### Story
 ***
-A Feature story should contain the following information
+A Story issue should contain the following information
 
 **Title:** one line describing the story
 
@@ -166,7 +166,7 @@ Example
 Title:
 As a Director of Success (DoS), I should be able to initiate a "Share with Fellows" action for engagements with "Completed" needs assessments to Fellows who are not externally placed.
 
-Description: 
+Description:
 * As a DoS, I should be able to select and share engagements with "Completed" Needs Assessment status
 * After sharing an engagement, it shows up in the open engagement view
 ```
@@ -175,7 +175,7 @@ Description:
 
 #### Bug
 ***
-A bug story should contain the following information:
+A Bug issue should contain the following information:
 
 **Title:** A short description of the bug.
 
@@ -202,9 +202,9 @@ Resources:
 Attach a screenshot of the error caused by the bug if applicable.
 ```
 
-#### Chore
+#### Task
 ***
-A chore story should include the following information:
+A Task issue should include the following information:
 
 **Title:** A short description of what needs to be done.
 
