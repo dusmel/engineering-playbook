@@ -22,7 +22,7 @@
 Branches created should be named using the following format:
 
 ```
-{issue type}-{issue summary}-{Jira issue id}
+{issue type}-{issue summary}-{Jira issue ID}
 ```
 
 `issue type` - Indicates the context of the branch and should be one of:
@@ -33,7 +33,7 @@ Branches created should be named using the following format:
 
 `story summary` - Short 2-3 words summary about what the branch contains
 
-`Jira Issue id` - The Id of the Jira issue associated with the commit
+`Jira Issue ID` - The ID of the Jira issue associated with the commit
 
 **Example**
 
@@ -47,7 +47,7 @@ A commit message consists of a **header**, a **body** and a **footer**, separate
 
 Any line of the commit message cannot be longer than **100 characters!** This allows the message to be easier to read on github as well as in various git tools.
 ```
-<type>(<scope>): <subject>
+<issue ID><type>(<scope>): <subject>
 <BLANK LINE>
 <body>
 <BLANK LINE>
@@ -57,7 +57,9 @@ These rules are adopted from [the AngularJS commit convention](https://docs.goog
 
 #### Message Header
 ***
-The message header is a single line that contains succinct description of the change containing a **type**, an optional **scope** and a **subject**.
+The message header is a single line that contains succinct description of the change containing an **issue ID**, a **type**, an optional **scope** and a **subject**.
+
+`issue ID` - this is to provide the advantage of immediately seeing the related Jira issue at the very top of the commit message. This becomes really useful when one does `git log --oneline` which doesn't show as far down to the footer of the commit message.
 
 #####`<type>`
 This describes the kind of change that this commit is providing.
@@ -97,7 +99,7 @@ Finished, fixed or delivered issue types should be listed on a separate line in 
 #### Message Example
 ***
 ```
-story(kafka): implement exactly once delivery
+DT-1048-story(kafka): implement exactly once delivery
 
 - ensure every event published to kafka is delivered exactly once
 - implement error handling for failed delivery
