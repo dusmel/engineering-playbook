@@ -31,6 +31,8 @@ Branches created should be named using the following format:
 - bg == Bug
 - tk == Task
 
+NOTE: Abbreviations [`sy`, `bg`, and `tk`] are derived from the first and last characters of a Jira Issue.
+
 `story summary` - Short 2-3 words summary about what the branch contains
 
 `Jira Issue ID` - The ID of the Jira issue associated with the commit
