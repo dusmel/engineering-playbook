@@ -1,46 +1,91 @@
 ### Table of Content
 ***
-1. [Branch Naming](#branch-naming)
-2. [Commit Message](#commit-message)
+
+1. [Introduction](#introduction)
+2. [File Naming](#file-naming)
+3. [Branch Naming](#branch-naming)
+4. [Commit Message](#commit-message)
     1. [Message Header](#message-header)
     2. [Message Body](#message-body)
     3. [Message Footer](#message-footer)
     4. [Message Example](#message-example)
-3. [Pull Request](#pull-request)
+5. [Pull Request](#pull-request)
     1. [PR Title](#pr-title)
     2. [PR Description Template](#pr-description-template)
     3. [PR Example](#pr-example)
     4. [PR Etiquette](#pr-etiquette)
-4. [Jira Issue](#jira-issue)
+6. [Jira Issue](#jira-issue)
     1. [Story Issue](#story)
     2. [Bug Issue](#bug)
     3. [Task Issue](#task)
-5. [Repo Readme](#repo-readme)
+7. [Repo Readme](#repo-readme)
+
+### Introduction
+***
+The following are rules guiding our coding process. Linting and prettier standards are not listed here because different projects and languages may have different formatting preferences. Each project should embed linting and prettier standards within its codebase such that linting and prettier issues are automagically resolved if engineers inadvertently attempt to commit non-compliant work.
+
+### File Naming
+***
+We favour the `dot separated` + `kebab-case` convention. Files created should be named using the following format:
+
+```
+{file title}.{file subtype}.{file type}.{file extension}
+```
+
+`file title` - Indicates what the file is about. Examples include `permission-type`, `employee`, `permission`, `role`, etc.
+
+`file subtype` - The subtype of the file. The file may be an interface of a repository. In this case, the subtype is `repository`. A file can have more than one subtype, but they must all be separated by the period [.].
+
+`file type` - Indicates the type of the file. These could be `controller`, `dto` `service`, `repository`, `interface`, etc. A file should have only one type.
+
+`file extension` - Denotes the extension of the file, eg, `js`, `ts`, `json`, etc.
+
+For example, an ExampleFile controller would be broken down thus:
+
+```
+file title: example-file
+file type: controller
+file extension: ts
+```
+
+Giving us `example-file.controller.ts`.
+NOTE that in the example above, there's no file subtype.
+
+If a file has subtypes, all subtypes should be listed in their respective positions with the file type listed last just before the file extension. For example, an interface for ExampleFile service should be named with the following parts:
+
+```
+file title: example-file
+file subtype: service
+file type: interface
+file extension: ts
+```
+
+Giving us `example-file.service.interface.ts`.
 
 ### Branch Naming
 ***
 Branches created should be named using the following format:
 
 ```
-{issue type}-{issue summary}-{Jira issue ID}
+{issue type}/{Jira issue ID}-{issue summary}
 ```
 
 `issue type` - Indicates the context of the branch and should be one of:
 
-- sy == Story [Story in Jira]
-- bg == Bug
-- tk == Task
-
-NOTE: Abbreviations [`sy`, `bg`, and `tk`] are derived from the first and last characters of a Jira Issue.
-
-`story summary` - Short 2-3 words summary about what the branch contains
+- story
+- bug
+- task
 
 `Jira Issue ID` - The ID of the Jira issue associated with the commit
+
+`issue summary` - Short 2-3 words summary about what the branch contains
+
+NOTE: The `issue type` is the same even for subtasks belonging to any of the issue types.
 
 **Example**
 
 ```
-sy-resources-rest-endpoints-DT-1048
+story/DT-1048-resources-rest-endpoints
 ```
 
 ### Commit Message
@@ -64,14 +109,14 @@ The message header is a single line that contains succinct description of the ch
 `issue ID` - this is to provide the advantage of immediately seeing the related Jira issue at the very top of the commit message. This becomes really useful when one does `git log --oneline` which doesn't show as far down to the footer of the commit message.
 
 #####`<type>`
-This describes the kind of change that this commit is providing.
+This describes the kind of change that this commit is providing. It also applies to subtasks belonging to any of the Jira issue types..
 * story (story)
 * fix (bug fix)
 * docs (documentation)
 * style (formatting, missing semi colons, …)
 * refactor
 * test (when adding missing tests)
-* chore (maintain)
+* task (maintain)
 
 #####`<scope>`
 Scope can be anything specifying place of the commit change. For example **events**, **kafka**, **userModel**, **authorization**, **authentication**, **loginPage**, etc...
@@ -125,18 +170,16 @@ The PR title should be named using the following format:
 The description of the PR should contain the following headings and corresponding content in Markdown format.
 
 ```md
-#### What does this PR do?
-#### Description of Task to be completed?
-#### How should this be manually tested?
-#### Any background context you want to provide?
-#### What are the relevant Jira Issues?
-#### Screenshots (if appropriate)
-#### Questions:
+#### Description
+#### Type of change
+#### How Has This Been Tested?
+#### Checklist:
+#### JIRA
 ```
 
 #### PR Example
 ***
-![](https://github.com/andela/bestpractices/raw/master/img/git-naming.png)
+![](https://github.com/andela/engineering-playbook/blob/34ce58d365b64f8950c4b2164473f628b681657d/assets/pr-sample.png)
 
 #### PR Etiquette
 ***
