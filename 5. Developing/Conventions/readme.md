@@ -1,44 +1,195 @@
 ### Table of Content
 ***
-1. [Branch Naming](#branch-naming)
-2. [Commit Message](#commit-message)
+
+1. [Introduction](#introduction)
+2. [Automagic Formatting](#automagic-formatting)
+    1. [Basic Linting Rules](#basic-linting-rules)
+    2. [Basic Prettier Rules](#basic-prettier-rules)
+3. [File Naming](#file-naming)
+4. [Branch Naming](#branch-naming)
+5. [Commit Message](#commit-message)
     1. [Message Header](#message-header)
     2. [Message Body](#message-body)
     3. [Message Footer](#message-footer)
     4. [Message Example](#message-example)
-3. [Pull Request](#pull-request)
+6. [Pull Request](#pull-request)
     1. [PR Title](#pr-title)
     2. [PR Description Template](#pr-description-template)
     3. [PR Example](#pr-example)
     4. [PR Etiquette](#pr-etiquette)
-4. [Pivotal Tracker Story](#pivotal-tracker-story)
-    1. [Feature Story](#feature)
-    2. [Bug Story](#bug)
-    3. [Chore Story](#chore)
-5. [Repo Readme](#repo-readme)
+7. [Jira Issue](#jira-issue)
+    1. [Story Issue](#story)
+    2. [Bug Issue](#bug)
+    3. [Task Issue](#task)
+8. [Repo Readme](#repo-readme)
+
+### Introduction
+***
+The following are rules guiding our coding process. Common linting and prettier standards are listed below, and they are based on our work with TypeScript, which is our development language. Projects should extend these linting and prettier standards within their codebase as may be needed.
+
+### Automagic Formatting
+***
+Our projects should have the following packages installed within `devDependencies`:
+
+- `tslint` >= 5.12.1
+- `prettier` >= 1.16.4
+- `husky` >= 1.3.1
+- `lint-staged` >= 8.1.4
+
+The following script commands should be added within the project package's `scripts`
+
+```json
+{
+  "prettify": "prettier --write",
+  "lint": "tslint -p tsconfig.json -c tslint.json"
+}
+```
+
+The following pre-commit hooks configuration should also be specified within the project package
+
+```json
+{
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "ignore": [],
+    "linters": {
+      "*.{ts,js,json,css,md}": [
+        "yarn prettify",
+        "yarn lint",
+        "git add"
+      ]
+    }
+  }
+}
+```
+
+We specify basic linting and prettier standards that all projects within Engineering must extend so that linting and prettier issues are automagically resolved if engineers inadvertently attempt to commit non-compliant work.
+
+#### Basic Linting Rules
+***
+
+```json
+  {
+    "defaultSeverity": "error",
+    "extends": ["tslint:recommended"],
+    "jsRules": {
+      "no-unused-expression": true
+    },
+    "rules": {
+      "arrow-parens": false,
+      "array-type": [ false ],
+      "curly": false,
+      "eofline": true,
+      "indent": [ true, "spaces", 2 ],
+      "interface-name": [ true ],
+      "max-classes-per-file": [ true, 1 ],
+      "max-line-length": [
+        true,
+        {
+          "limit": 150,
+          "ignore-pattern": "^import |^export {(.*?)}|class [a-zA-Z]+ implements |//"
+        }
+      ],
+      "member-access": [ false ],
+      "member-ordering": [ false ],
+      "no-console": [ true, "log", "info", "error", "warn" ],
+      "no-empty": true,
+      "no-empty-interface": true,
+      "no-unused-expression": false,
+      "object-literal-key-quotes": [true, "as-needed"],
+      "object-literal-sort-keys": false,
+      "one-line": [ true, "check-catch", "check-finally", "check-else", "check-open-brace" ]    ,
+      "one-variable-per-declaration": [ false ],
+      "ordered-imports": [ false ],
+      "semicolon": [ true, "always" ],
+      "variable-name": [ true, "ban-keywords", "check-format", "allow-leading-underscore" ]
+    },
+    "rulesDirectory": []
+  }
+
+```
+
+#### Basic Prettier Rules
+***
+
+```json
+{
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "semi": true,
+  "trailingComma": "all",
+  "tabWidth": 2,
+  "useTabs": false
+}
+
+```
+
+### File Naming
+***
+We favour the `dot separated` + `kebab-case` convention. Files created should be named using the following format:
+
+```
+{file title}.{file subtype}.{file type}.{file extension}
+```
+
+`file title` - Indicates what the file is about. Examples include `permission-type`, `employee`, `permission`, `role`, etc.
+
+`file subtype` - The subtype of the file. The file may be an interface of a repository. In this case, the subtype is `repository`. A file can have more than one subtype, but they must all be separated by the period [.].
+
+`file type` - Indicates the type of the file. These could be `controller`, `dto` `service`, `repository`, `interface`, etc. A file should have only one type.
+
+`file extension` - Denotes the extension of the file, eg, `js`, `ts`, `json`, etc.
+
+For example, an ExampleFile controller would be broken down thus:
+
+```
+file title: example-file
+file type: controller
+file extension: ts
+```
+
+Giving us `example-file.controller.ts`.
+NOTE that in the example above, there's no file subtype.
+
+If a file has subtypes, all subtypes should be listed in their respective positions with the file type listed last just before the file extension. For example, an interface for ExampleFile service should be named with the following parts:
+
+```
+file title: example-file
+file subtype: service
+file type: interface
+file extension: ts
+```
+
+Giving us `example-file.service.interface.ts`.
 
 ### Branch Naming
 ***
 Branches created should be named using the following format:
 
 ```
-{story type}-{story summary}-{pivotal tracker id}
+{issue type}/{Jira issue ID}-{issue summary}
 ```
 
-`story type` - Indicates the context of the branch and should be one of:
+`issue type` - Indicates the context of the branch and should be one of:
 
-- ft == Feature
-- bg == Bug
-- ch == Chore
+- story
+- bug
+- task
 
-`story summary` - Short 2-3 words summary about what the branch contains
+`Jira Issue ID` - The ID of the Jira issue associated with the commit
 
-`pivotal tracker id` - The Id of the pivotal tracker story associated with the commit
+`issue summary` - Short 2-3 words summary about what the branch contains
+
+NOTE: The `issue type` is the same even for subtasks belonging to any of the issue types.
 
 **Example**
 
 ```
-ft-resources-rest-endpoints-111504508
+story/DT-1048-resources-rest-endpoints
 ```
 
 ### Commit Message
@@ -47,7 +198,7 @@ A commit message consists of a **header**, a **body** and a **footer**, separate
 
 Any line of the commit message cannot be longer than **100 characters!** This allows the message to be easier to read on github as well as in various git tools.
 ```
-<type>(<scope>): <subject>
+<issue ID><type>(<scope>): <subject>
 <BLANK LINE>
 <body>
 <BLANK LINE>
@@ -57,17 +208,19 @@ These rules are adopted from [the AngularJS commit convention](https://docs.goog
 
 #### Message Header
 ***
-The message header is a single line that contains succinct description of the change containing a **type**, an optional **scope** and a **subject**.
+The message header is a single line that contains succinct description of the change containing an **issue ID**, a **type**, an optional **scope** and a **subject**.
+
+`issue ID` - this is to provide the advantage of immediately seeing the related Jira issue at the very top of the commit message. This becomes really useful when one does `git log --oneline` which doesn't show as far down to the footer of the commit message.
 
 #####`<type>`
-This describes the kind of change that this commit is providing.
-* feat (feature)
+This describes the kind of change that this commit is providing. It also applies to subtasks belonging to any of the Jira issue types..
+* story (story)
 * fix (bug fix)
 * docs (documentation)
 * style (formatting, missing semi colons, …)
 * refactor
 * test (when adding missing tests)
-* chore (maintain)
+* task (maintain)
 
 #####`<scope>`
 Scope can be anything specifying place of the commit change. For example **events**, **kafka**, **userModel**, **authorization**, **authentication**, **loginPage**, etc...
@@ -89,20 +242,20 @@ http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
 
 #### Message Footer
 ***
-Finished, fixed or delivered stories should be listed on a separate line in the footer prefixed with "Finishes", "Fixes" , or "Delivers" keyword like this:
+Finished, fixed or delivered issue types should be listed on a separate line in the footer prefixed with "Finishes", "Fixes" , or "Delivers" keyword like this:
 ```
-[(Finishes|Fixes|Delivers) #TRACKER_STORY_ID]
+[(Finishes|Fixes|Delivers) JIRA_ISSUE_ID]
 ```
 
 #### Message Example
 ***
 ```
-feat(kafka): implement exactly once delivery
+DT-1048-story(kafka): implement exactly once delivery
 
 - ensure every event published to kafka is delivered exactly once
 - implement error handling for failed delivery
 
-[Delivers #130635935]
+[Delivers DT-1048]
 ```
 
 ### Pull Request
@@ -113,7 +266,7 @@ feat(kafka): implement exactly once delivery
 The PR title should be named using the following format:
 
 ```
-#[STORY_ID] [Story description]
+[JIRA_ISSUE_ID] [Story description]
 ```
 
 #### PR Description Template
@@ -121,18 +274,16 @@ The PR title should be named using the following format:
 The description of the PR should contain the following headings and corresponding content in Markdown format.
 
 ```md
-#### What does this PR do?
-#### Description of Task to be completed?
-#### How should this be manually tested?
-#### Any background context you want to provide?
-#### What are the relevant pivotal tracker stories?
-#### Screenshots (if appropriate)
-#### Questions:
+#### Description
+#### Type of change
+#### How Has This Been Tested?
+#### Checklist:
+#### JIRA
 ```
 
 #### PR Example
 ***
-![](https://github.com/andela/bestpractices/raw/master/img/git-naming.png)
+![](https://github.com/andela/engineering-playbook/blob/34ce58d365b64f8950c4b2164473f628b681657d/assets/pr-sample.png)
 
 #### PR Etiquette
 ***
@@ -151,11 +302,11 @@ PRs that take too much time to get reviewed can hinder on a team's progress. As 
 
 
 
-### Pivotal Tracker Story
+### Jira Issues
 ***
-#### Feature
+#### Story
 ***
-A Feature story should contain the following information
+A Story issue should contain the following information
 
 **Title:** one line describing the story
 
@@ -166,7 +317,7 @@ Example
 Title:
 As a Director of Success (DoS), I should be able to initiate a "Share with Fellows" action for engagements with "Completed" needs assessments to Fellows who are not externally placed.
 
-Description: 
+Description:
 * As a DoS, I should be able to select and share engagements with "Completed" Needs Assessment status
 * After sharing an engagement, it shows up in the open engagement view
 ```
@@ -175,7 +326,7 @@ Description:
 
 #### Bug
 ***
-A bug story should contain the following information:
+A Bug issue should contain the following information:
 
 **Title:** A short description of the bug.
 
@@ -202,9 +353,9 @@ Resources:
 Attach a screenshot of the error caused by the bug if applicable.
 ```
 
-#### Chore
+#### Task
 ***
-A chore story should include the following information:
+A Task issue should include the following information:
 
 **Title:** A short description of what needs to be done.
 
