@@ -2,27 +2,131 @@
 ***
 
 1. [Introduction](#introduction)
-2. [File Naming](#file-naming)
-3. [Branch Naming](#branch-naming)
-4. [Commit Message](#commit-message)
+2. [Automagic Formatting](#automagic-formatting)
+    1. [Basic Linting Rules](#basic-linting-rules)
+    2. [Basic Prettier Rules](#basic-prettier-rules)
+3. [File Naming](#file-naming)
+4. [Branch Naming](#branch-naming)
+5. [Commit Message](#commit-message)
     1. [Message Header](#message-header)
     2. [Message Body](#message-body)
     3. [Message Footer](#message-footer)
     4. [Message Example](#message-example)
-5. [Pull Request](#pull-request)
+6. [Pull Request](#pull-request)
     1. [PR Title](#pr-title)
     2. [PR Description Template](#pr-description-template)
     3. [PR Example](#pr-example)
     4. [PR Etiquette](#pr-etiquette)
-6. [Jira Issue](#jira-issue)
+7. [Jira Issue](#jira-issue)
     1. [Story Issue](#story)
     2. [Bug Issue](#bug)
     3. [Task Issue](#task)
-7. [Repo Readme](#repo-readme)
+8. [Repo Readme](#repo-readme)
 
 ### Introduction
 ***
-The following are rules guiding our coding process. Linting and prettier standards are not listed here because different projects and languages may have different formatting preferences. Each project should embed linting and prettier standards within its codebase such that linting and prettier issues are automagically resolved if engineers inadvertently attempt to commit non-compliant work.
+The following are rules guiding our coding process. Common linting and prettier standards are listed below, and they are based on our work with TypeScript, which is our development language. Projects should extend these linting and prettier standards within their codebase as may be needed.
+
+### Automagic Formatting
+***
+Our projects should have the following packages installed within `devDependencies`:
+
+- `tslint` >= 5.12.1
+- `prettier` >= 1.16.4
+- `husky` >= 1.3.1
+- `lint-staged` >= 8.1.4
+
+The following script commands should be added within the project package's `scripts`
+
+```json
+{
+  "prettify": "prettier --write",
+  "lint": "tslint -p tsconfig.json -c tslint.json"
+}
+```
+
+The following pre-commit hooks configuration should also be specified within the project package
+
+```json
+{
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "ignore": [],
+    "linters": {
+      "*.{ts,js,json,css,md}": [
+        "yarn prettify",
+        "yarn lint",
+        "git add"
+      ]
+    }
+  }
+}
+```
+
+We specify basic linting and prettier standards that all projects within Engineering must extend so that linting and prettier issues are automagically resolved if engineers inadvertently attempt to commit non-compliant work.
+
+#### Basic Linting Rules
+***
+
+```json
+  {
+    "defaultSeverity": "error",
+    "extends": ["tslint:recommended"],
+    "jsRules": {
+      "no-unused-expression": true
+    },
+    "rules": {
+      "arrow-parens": false,
+      "array-type": [ false ],
+      "curly": false,
+      "eofline": true,
+      "indent": [ true, "spaces", 2 ],
+      "interface-name": [ true ],
+      "max-classes-per-file": [ true, 1 ],
+      "max-line-length": [
+        true,
+        {
+          "limit": 150,
+          "ignore-pattern": "^import |^export {(.*?)}|class [a-zA-Z]+ implements |//"
+        }
+      ],
+      "member-access": [ false ],
+      "member-ordering": [ false ],
+      "no-console": [ true, "log", "info", "error", "warn" ],
+      "no-empty": true,
+      "no-empty-interface": true,
+      "no-unused-expression": false,
+      "object-literal-key-quotes": [true, "as-needed"],
+      "object-literal-sort-keys": false,
+      "one-line": [ true, "check-catch", "check-finally", "check-else", "check-open-brace" ]    ,
+      "one-variable-per-declaration": [ false ],
+      "ordered-imports": [ false ],
+      "semicolon": [ true, "always" ],
+      "variable-name": [ true, "ban-keywords", "check-format", "allow-leading-underscore" ]
+    },
+    "rulesDirectory": []
+  }
+
+```
+
+#### Basic Prettier Rules
+***
+
+```json
+{
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "semi": true,
+  "trailingComma": "all",
+  "tabWidth": 2,
+  "useTabs": false
+}
+
+```
 
 ### File Naming
 ***
