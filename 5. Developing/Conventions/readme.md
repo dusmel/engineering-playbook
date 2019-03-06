@@ -198,7 +198,7 @@ A commit message consists of a **header**, a **body** and a **footer**, separate
 
 Any line of the commit message cannot be longer than **100 characters!** This allows the message to be easier to read on github as well as in various git tools.
 ```
-<issue ID><type>(<scope>): <subject>
+<issue ID>-<type>(<scope>): <subject>
 <BLANK LINE>
 <body>
 <BLANK LINE>
@@ -243,8 +243,28 @@ http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
 #### Message Footer
 ***
 Finished, fixed or delivered issue types should be listed on a separate line in the footer prefixed with "Finishes", "Fixes" , or "Delivers" keyword like this:
+
 ```
 [(Finishes|Fixes|Delivers) JIRA_ISSUE_ID]
+```
+
+A reminder would be to think of completion this way:
+- We **Finish** tasks, so for a `task` issue type, the footer should read:
+
+        Finishes JIRA_ISSUE_ID
+
+- We **Fix** bugs, so the footer for a `bug` issue type would be:
+
+        Fixes JIRA_ISSUE_ID
+
+- We **Deliver** stories, so the footer for a `story` issue type would be:
+
+        Delivers JIRA_ISSUE_ID
+
+If the commit doesn't mark completion, that is, this isn't the last commit for the issue, simply put the `JIRA_ISSUE_ID` on the footer like this:
+
+```
+[JIRA_ISSUE_ID]
 ```
 
 #### Message Example
@@ -283,7 +303,7 @@ The description of the PR should contain the following headings and correspondin
 
 #### PR Example
 ***
-![](https://github.com/andela/engineering-playbook/blob/34ce58d365b64f8950c4b2164473f628b681657d/assets/pr-sample.png)
+![](https://github.com/andela/engineering-playbook/blob/master/assets/pr-sample.png?raw=true)
 
 #### PR Etiquette
 ***
